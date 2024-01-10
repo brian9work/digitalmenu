@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Description = ({text}) => {
+const Description = ({children}) => {
     return (
-        <h3 className='description'>{text}</h3>
+        <h3 className='description'>{children}</h3>
     );
 }
 

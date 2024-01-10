@@ -37,29 +37,46 @@ html{
         font-size: 15px;
     }
 }
-input{
+input,textarea{
     border: 0;
     outline: none;
     display: block;
-    box-shadow: 0 0 6px rgba(100, 100, 100, 0.3);
+    box-shadow: 0 0 1.5px rgb(124, 124, 124);
     width: 100%;
     padding: .6rem;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: .8rem;
+}
+button{
+    border: 0;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: .8rem 0;
+    font-size: .9rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0 0 1.5px rgb(78, 78, 78);
+    // box-shadow: 0 0 1.5px rgb(78, 78, 78);
+    background-color: #0000;
+    background: rgb(25, 25, 169);
+    color: white;
+    cursor: pointer;
+}
+textarea{
+    height: 6rem;
+    resize: none;
 }
 .btnOrdenar{
     display: block;
-    margin: 5rem auto 0;
-    padding: 0.8rem 0;
-    width: 250px;
-    border-radius: 20px;
-    border: 0;
+    margin-top: 5rem;
     background-color: #ffffff;
     font-size: 1.2rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
+    color: black;
     font-weight: 600;
+    border-radius: 25px;
 }
 .container{
     width: 100%;
@@ -166,7 +183,7 @@ input{
     z-index: 2;
     // transition: .3s all;
     display: flex;
-    form,.form{
+    .form{
         margin: 20vh auto 0;
         width: 95%;
         max-width: 500px;
@@ -183,17 +200,7 @@ input{
             }
             button{
                 display: block;
-                border: 0;
-                outline: none;
-                width: 100%;
-                max-width: 200px;
-                margin: 16px auto 0;
-                padding: .5rem 0;
-                font-size: .8rem;
-                text-transform: uppercase;
-                border-radius: 20px;
-                box-shadow: 0 0 0 2px rgba(100, 100, 100, 0.4);
-                cursor: pointer;
+                margin-top: 16px;
             }
         }
     }
@@ -207,6 +214,14 @@ input{
 .description{
     font-size:1.1rem;
     font-weight: 300;
+}
+.message{
+    margin-top: .5rem;
+    font-size:1.3rem;
+    font-weight: 900;
+    text-align: center;
+    font-family:"Josefin Sans",sans-serif;
+    color: #ff0000;
 }
 .data{
     // background-color: red;
@@ -403,11 +418,15 @@ input{
             border-radius: 25px;
             box-shadow: 2px 2px 3px #cccccc;
             overflow-y: auto;
+            transform: translateY(-05vh);
+            transition: .5s all ease-in-out;
             >div{
                 width: 100%;
                 height: 100%;
                 &.orderList{
+                    padding-top: .5rem;
                     .orderListCategories{
+                        padding-top: 1rem;
                         padding-bottom: .2rem;
                         margin-bottom: .5rem;
                         border-bottom: 2px solid #b7b7b7;
@@ -415,12 +434,14 @@ input{
                     .ordenTotal{
                         text-align: right;
                         margin-top: .5rem;
+                        padding-top: .5rem;
                         border-top: .5px solid #b7b7b7;
                         padding-right: .5rem;
                         font-family: "Montserrat",sans-serif;
-                        font-size: .7rem;
+                        font-size: 1rem;
                         b{
-                            font-size: .8rem;
+                            font-size: 1rem;
+                            margin-right: 5%;
                         }
                     }
                     main{
@@ -442,6 +463,75 @@ input{
                             }
                         }
                     }
+                }
+                &.homeService{
+                    form{
+                        margin-top: 1rem;
+                        section{
+                            margin-top: .5rem;
+                            font-size: 1rem;
+                            letter-spacing: 1.5px;
+                            input,textarea{
+                                font-size: 1rem;
+                                letter-spacing: 1.5px;
+                            }
+                        }
+                        >div{
+                            margin-top: 1rem;
+                            p{
+                                display: block;
+                                width: 100%;
+                            }
+                            div{
+                                margin-top: 10px;
+                                display: flex;
+                                button{
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.transfer{
+                    div{
+                        margin-top: 1rem;
+                        p{
+                            margin-top: .6rem;
+                            display: block;
+                            b{
+                                display: block;
+                                margin-top: .3rem;
+                                font-size: 1.3rem;
+                                padding-left: 3rem;
+                            }
+                        }
+                    }
+                }
+                &.cash{
+                    form{
+                        section{
+                            margin-top: .5rem;
+                            // label{}
+                            // input{}
+                        }
+                    }
+                }
+                &.inRestaurant{
+                    form{
+                        section{
+                            margin-top: .5rem;
+                            // label{}
+                            // input{}
+                        }
+                    }
+                }
+                .makeOrder{
+                    background-color: rgb(48, 21, 202);
+                    display: block;
+                    padding: .7rem 0;
+                    margin-top: 1.5rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
                 }
                 // background-color: red;
             }

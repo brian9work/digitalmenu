@@ -38,10 +38,10 @@ const AddOrder = () => {
             }
          }}
       >
-         <form>
-            <SubTittle text={"Agrega un pedido"} />
+         <form className='form'>
+            <SubTittle>Agrega un pedido</SubTittle>
             <section>
-               <Description text={"¿Cuantas ordenes desea pedir?"} />
+               <Description>¿Cuantas pz desea pedir?</Description>
                <input
                   id='addOrder'
                   type="tel"
