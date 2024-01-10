@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import sushi from '../../data/sushi.json'
 import Item from './Item';
 
-const Section = ({ data, addOrder, setaddOrder,setclassActive }) => {
+const Section = ({ data }) => {
     const [height, setheight] = useState("4rem");
     const changeHeight = (e) => {
         setheight(height === "4rem" ? (e.target.parentElement.scrollHeight + 2) + "px" : "4rem")
@@ -28,8 +28,6 @@ const Section = ({ data, addOrder, setaddOrder,setclassActive }) => {
                             className={(data.name+"_"+d.plat).replaceAll(" ","_").replaceAll("(","_").replaceAll(")","_")} 
                             key={(data.name+"_"+d.plat).replaceAll(" ","_").replaceAll("(","_").replaceAll(")","_")}
                             data={d} 
-                            setaddOrder={setaddOrder} 
-                            setclassActive={setclassActive}
                             />
                         )
                     })}

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SubTittle = ({text}) => {
+const SubTittle = ({children}) => {
     return (
-        <h2 className='subTittle'>{text}</h2>
+        <h2 className='subTittle'>{children}</h2>
     );
 }
 

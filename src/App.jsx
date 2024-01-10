@@ -13,7 +13,7 @@ function App() {
          <div onSubmit={e =>{ e.preventDefault(); }}>
             <BrowserRouter>
                <Routes>
-                  <Route exact path='/' element={<Index />} />
+                  <Route exact path='*' element={<Index />} />
                   <Route exact path='/sushi' element={<SushiMaki />} />
                   <Route exact path='/burguers' element={<Oyamel />} />
                   <Route exact path='/context' element={<Context />} />
