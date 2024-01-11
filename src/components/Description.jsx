@@ -2,7 +2,7 @@ import React from 'react';
 
 const Description = ({children}) => {
     return (
-        <h3 className='description'>{children}</h3>
+        <p className='description'>{children}</p>
     );
 }
 

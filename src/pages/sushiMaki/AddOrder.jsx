@@ -10,18 +10,18 @@ const AddOrder = () => {
          } = useContext(OrderContext);
    const order = (e) => {
       try {
-         let input = document.getElementById("addOrder").value;
-         if (/[1-9]{1,3}$/.test(input)) {
+         let input = document.getElementById("addOrder");
+         if (/[1-9]{1,3}$/.test(input.value)) {
             const component = document.querySelector("." + getSaurceSelected());
             component.classList.replace("active", "order-active")
-            component.dataset.pz = input;
+            component.dataset.pz = input.value;
             functionsOrder.setOrder(component.dataset)
-            component.querySelector("b").innerHTML = input
+            component.querySelector("b").innerHTML = input.value
             stateComponentAddSaurce[1]("0")
-            input = ""
          } else {
             alert("Por favor escoja un valor valido")
          }
+         input.value = ""
       } catch (error) {
          console.log(error);
       }

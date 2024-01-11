@@ -1,0 +1,38 @@
+{
+    "data": [
+    {
+       "name": "postres",
+       "imag": "media/narutomaki.png",
+       "data": [
+          {
+             "plat": "tempura helado classic",
+             "ingr": "cubierto con chocolate lÃ­quido.",
+             "cost": 40
+          }, {
+             "plat": "tempura helado crunchy",
+             "ingr": "cubierto con cajeta y nuez.",
+             "cost": 45
+          }, {
+             "plat": "tempura helado magic",
+             "ingr": "cubierto con chocolate lÃ­quido, crema batida, cereza y con bola de nieve sabor chocolate.",
+             "cost": 50
+          }, {
+             "plat": "nieve de limon",
+             "cost": 20
+          }
+       ]
+    },
+    {
+       "name": "extras",
+       "imag": "media/takoyaki.png",
+       "data": [
+          { "plat": "extra salsa de anguila", "cost": 15 },
+          { "plat": "extra aderezo de chipotle", "cost": 15 },
+          { "plat": "extra pasta tampico", "cost": 20 },
+          { "plat": "chiles toreados", "cost": 15 },
+          { "plat": "extra wasabi", "cost": 15 },
+          { "plat": "ingrediente extra", "cost": 15 },
+          { "plat": "extra siracha", "cost": 15 }
+       ]
+    }
+]}
