@@ -150,11 +150,11 @@ const Cash = ({ fn }) => {
       <div className="cash">
          {/* <SubTittle>Pago en efectivo</SubTittle> */}
          <SubTittle>Su pedido ya casi finaliza</SubTittle>
-         <Description>
             <h3 style={{ marginTop: '.8rem', fontWeight: '300' }}>
                Escriba la cantidad con la que pagara
             </h3>
-         </Description>
+         {/* <Description>
+         </Description> */}
          <form>
             <section>
                <label>Si pagara con cambio escriba el total exacto</label>
@@ -213,7 +213,37 @@ const Order = () => {
       paymentMethod,
    } = useContext(OrderContext);
 
-   const [actMenu, setactMenu] = useState("order")
+   const [actMenu, setactMenu] = useState("orderList")
+   const [compHeight, setcompHeight] = useState(0)
+   const [component, setComponent] = useState(null)
+
+   const changeMenu = (val) =>{
+      setactMenu(val)
+      if (val === "orderList"){setcompHeight("17rem")}
+      if (val === "homeService"){setcompHeight("33rem")}
+      if (val === "inRestaurant"){setcompHeight("12rem")}
+      if (val === "transfer"){setcompHeight("19rem")}
+      if (val === "cash"){setcompHeight("17rem")}
+      console.log(compHeight +" - "+ val )
+      // console.log(val)
+
+      // setComponent(document.querySelector(".orderComponentsMain").querySelector(`div.${actMenu}`))
+      // console.log(component)
+      // console.log(component.scrollHeight)
+      // setcompHeight(component.scrollHeight)
+      // console.log(actMenu)
+      // const el = document.querySelector(".orderComponentsMain").querySelector(`div.${val}`).scrollHeight
+      // setcompHeight(el)
+      // console.log(component);
+      // console.log(val);
+      // console.log(document.querySelector(".orderComponentsMain").querySelector(`div.${val}`));
+      // console.log(document.querySelector(".orderComponentsMain").querySelector(`div.${val}`).scrollHeight);
+      // console.log(el);
+   }
+   useEffect(() => {
+      setcompHeight("17rem")
+      // setComponent(document.querySelector(".orderComponentsMain").querySelector(`div.${actMenu}`))
+   },[])
 
    return (
       <div className={`AddOrder order`}
@@ -222,24 +252,26 @@ const Order = () => {
          <div className='orderContaint'
             onClick={e => {
                if (e.target.className === 'orderContaint') {
-                  if (actMenu === "order") { stateComponentOrder[1](false) }
-                  if (actMenu === "homeService" || actMenu === "inRestaurant") { setactMenu("order") }
-                  if (actMenu === "transfer" || actMenu === "cash") { setactMenu("homeService") }
+                  if (actMenu === "orderList") { stateComponentOrder[1](false) }
+                  if (actMenu === "homeService" || actMenu === "inRestaurant") { changeMenu("orderList") }
+                  if (actMenu === "transfer" || actMenu === "cash") { changeMenu("homeService") }
                };
             }}>
             <nav className="orderComponents">
-               {/* <h3>{actMenu} - {paymentMethod[0]}</h3> */}
-               {((actMenu === "order") ? <OrderList fn={setactMenu} />
+               {/* <h3>{actMenu} </h3> */}
+               {/* {((actMenu === "order") ? <OrderList fn={setactMenu} />
                   : (actMenu === "homeService") ? <HomeService fn={setactMenu} />
                      : (actMenu === "inRestaurant") ? <InRestaurant fn={setactMenu} />
                         : (actMenu === "transfer") ? <Transfer fn={setactMenu} />
                            : <Cash fn={setactMenu} />
-               )}
-               {/* <HomeService fn={setactMenu} /> */}
-               {/* <OrderList fn={setactMenu} /> */}
-               {/* <Transfer fn={setactMenu} /> */}
-               {/* <Cash fn={setactMenu} /> */}
-               {/* <InRestaurant fn={setactMenu} /> */}
+               )} */}
+               <main className={`orderComponentsMain ${actMenu}`} style={{height: compHeight}}>
+                  <OrderList fn={changeMenu} />
+                  <HomeService fn={changeMenu} />
+                  <Transfer fn={changeMenu} />
+                  <Cash fn={changeMenu} />
+                  <InRestaurant fn={changeMenu} />
+               </main>
             </nav>
          </div>
       </div>
