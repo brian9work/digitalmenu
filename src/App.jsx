@@ -11,7 +11,7 @@ function App() {
    return (
       <>
          <div onSubmit={e =>{ e.preventDefault(); }}>
-            <BrowserRouter basename='/digitalmenu'>
+            <BrowserRouter>
                <Routes>
                   <Route exact path='*' element={<Index />} />
                   <Route exact path='/sushi' element={<SushiMaki />} />
