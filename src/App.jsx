@@ -14,9 +14,9 @@ function App() {
             <BrowserRouter>
                <Routes>
                   <Route exact path='*' element={<Index />} />
-                  <Route exact path='/sushi' element={<SushiMaki />} />
-                  <Route exact path='/burguers' element={<Oyamel />} />
-                  <Route exact path='/context' element={<Context />} />
+                  <Route exact path='/menu/sushi' element={<SushiMaki />} />
+                  <Route exact path='/menu/burguers' element={<Oyamel />} />
+                  <Route exact path='/menu/context' element={<Context />} />
                </Routes>
             </BrowserRouter>
          </div>
