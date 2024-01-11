@@ -57,11 +57,13 @@ button{
     font-size: .9rem;
     text-transform: uppercase;
     border-radius: 10px;
-    box-shadow: 0 0 1.5px rgb(78, 78, 78);
+    box-shadow: 0 0 1.5px 0px #1919a9;
+    // box-shadow: 0 0 1.5px 3px rgb(78, 78, 78);
     // box-shadow: 0 0 1.5px rgb(78, 78, 78);
-    background-color: #0000;
-    background: rgb(25, 25, 169);
-    color: white;
+    // background-color: #0000;
+    // background: #1919a9;
+    background-color: #fff;
+    color: black;
     cursor: pointer;
 }
 textarea{
@@ -217,7 +219,7 @@ textarea{
 }
 .message{
     margin-top: .5rem;
-    font-size:1.3rem;
+    font-size:1.1rem;
     font-weight: 900;
     text-align: center;
     font-family:"Josefin Sans",sans-serif;
@@ -428,7 +430,7 @@ textarea{
                 // align-items: center;
                 overflow: hidden;
                 transform: translateX(-0%);
-                transition: .4s all ease-in-out;
+                transition: .2s all ease-in-out;
                 &.orderList{
                     transform: translateX(-0%);
                     >div.orderList{
@@ -467,7 +469,7 @@ textarea{
                 >div{
                     width: 90%;
                     // height: auto;
-                    opacity: .1;
+                    opacity: 0;
                     transition: .3s all ease-in-out;
                     // background-color: rgb(255, 0, 221);
                     // display: flex;
@@ -494,9 +496,23 @@ textarea{
                             }
                         }
                         nav{
-                            margin: 1rem 0;
+                            margin: 1rem auto;
                             display: flex;
                             align-items: center;
+                            justify-content: space-around;
+                            gap: .6rem;
+                            margin-left: .2rem;
+                            // flex-wrap: wrap;
+                            // background-color: red;
+                            button{
+                                font-size: .8rem;
+                                padding: 0.5rem 0;
+                                text-transform: capitalize;
+                                color: black;
+                            }
+                            // button:nth-child(2){
+                            //     margin-top: .7rem;
+                            // }
                             // background-color: red;
                         }
                         main{
@@ -538,10 +554,12 @@ textarea{
                                     width: 100%;
                                 }
                                 div{
-                                    margin-top: 10px;
                                     display: flex;
+                                    gap: .5rem;
+                                    margin-top: 10px;
                                     button{
-                                        color: white;
+                                        padding: .6rem 0;
+                                        text-transform: capitalize;
                                     }
                                 }
                             }
@@ -583,10 +601,12 @@ textarea{
                     .makeOrder{
                         background-color: rgb(48, 21, 202);
                         display: block;
-                        padding: .7rem 0;
+                        padding: .5rem 0;
                         margin-top: 1.5rem;
                         font-weight: 600;
                         letter-spacing: 2px;
+                        color: white;
+                        text-transform: capitalize;
                     }
                     // background-color: red;
                 }

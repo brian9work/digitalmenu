@@ -1,20 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import SubTittle from '../../components/SubTittle';
 import OrderContext from './OrderContext';
-import Tittle from '../../components/Tittle';
-import Description from '../../components/Description';
 import Message from '../../components/Message';
 
 const MakeOrder = () => {
    const { msj } = useContext(OrderContext);
    return (
       <button className='makeOrder'
+      type='submit'
          onClick={e => {
             // console.log(msj())
             // console.log(msj()[1])
-            // console.log(msj()[2])
-            // window.location.href = msj()[2]
-            window.open(msj()[1], '_blank');
+            console.log(msj()[2])
+            console.log(msj()[3])
+            window.open(msj()[2], '_blank');
          }}
       >
          Hacer Pedido
@@ -22,9 +21,8 @@ const MakeOrder = () => {
    )
 }
 const OrderList = ({ fn }) => {
-   const { stateComponentOrder, functionsOrder, paymentMethod, homeService } = useContext(OrderContext);
+   const { stateComponentOrder, functionsOrder, homeService } = useContext(OrderContext);
    const saurces = functionsOrder.getOrder()
-   // console.log(saurces)
    if (saurces.length === 0) {
       setTimeout(() => {
          stateComponentOrder[1](false);
@@ -148,13 +146,10 @@ const Cash = ({ fn }) => {
    }
    return (
       <div className="cash">
-         {/* <SubTittle>Pago en efectivo</SubTittle> */}
          <SubTittle>Su pedido ya casi finaliza</SubTittle>
             <h3 style={{ marginTop: '.8rem', fontWeight: '300' }}>
                Escriba la cantidad con la que pagara
             </h3>
-         {/* <Description>
-         </Description> */}
          <form>
             <section>
                <label>Si pagara con cambio escriba el total exacto</label>
@@ -209,8 +204,6 @@ const Order = () => {
       { name: "cash", component: <Cash /> }
    ]
    const { stateComponentOrder,
-      functionsOrder,
-      paymentMethod,
    } = useContext(OrderContext);
 
    const [actMenu, setactMenu] = useState("orderList")
@@ -220,29 +213,13 @@ const Order = () => {
    const changeMenu = (val) =>{
       setactMenu(val)
       if (val === "orderList"){setcompHeight("17rem")}
-      if (val === "homeService"){setcompHeight("33rem")}
+      if (val === "homeService"){setcompHeight("32rem")}
       if (val === "inRestaurant"){setcompHeight("12rem")}
       if (val === "transfer"){setcompHeight("19rem")}
-      if (val === "cash"){setcompHeight("17rem")}
-      console.log(compHeight +" - "+ val )
-      // console.log(val)
-
-      // setComponent(document.querySelector(".orderComponentsMain").querySelector(`div.${actMenu}`))
-      // console.log(component)
-      // console.log(component.scrollHeight)
-      // setcompHeight(component.scrollHeight)
-      // console.log(actMenu)
-      // const el = document.querySelector(".orderComponentsMain").querySelector(`div.${val}`).scrollHeight
-      // setcompHeight(el)
-      // console.log(component);
-      // console.log(val);
-      // console.log(document.querySelector(".orderComponentsMain").querySelector(`div.${val}`));
-      // console.log(document.querySelector(".orderComponentsMain").querySelector(`div.${val}`).scrollHeight);
-      // console.log(el);
+      if (val === "cash"){setcompHeight("14rem")}
    }
    useEffect(() => {
       setcompHeight("17rem")
-      // setComponent(document.querySelector(".orderComponentsMain").querySelector(`div.${actMenu}`))
    },[])
 
    return (

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer, useState } from 'react';
+import { createContext, useContext, useReducer, useState } from 'react';
 import axios from 'axios';
 
 const ThemeContext = createContext(null);
@@ -66,8 +66,7 @@ function Form() {
 }
 
 function Panel({ title, children }) {
-  const {theme,getSaucers,getInput,setInput,input,valoresInput} = useContext(ThemeContext);
-  const valueInput = useState(getInput())
+  const {theme,getSaucers,getInput,valoresInput} = useContext(ThemeContext);
   console.log(getSaucers())
   console.log(theme)
   return (
@@ -79,9 +78,6 @@ function Panel({ title, children }) {
         onClick={e => {
           console.log("click")
           valoresInput[1]("valor")
-          // valueInput[1](!valueInput[0])
-          // console.log(valueInput[0])
-          // getInput() ? setInput(false) : setInput(true)
         }} 
       >Enviar</button><br/>
       <Button>Cambiar</Button> <br/>

@@ -1,10 +1,10 @@
-import React, { useState, createContext, useEffect, useContext, useReducer } from 'react';
+import React, { useState, useContext, useReducer } from 'react';
 import Tittle from '../components/Tittle';
 import AddOrder from './sushiMaki/AddOrder';
 import sushi from '../data/sushi.json'
-import Section from './sushiMaki/Section';
 import Order from './sushiMaki/Order';
 import OrderContext from './sushiMaki/OrderContext';
+import Data from './sushiMaki/Data';
 
 const SushiMaki = ()=>{
    const initialState = {
@@ -46,14 +46,14 @@ const SushiMaki = ()=>{
          phone: 527491060297,
          address:`*Direccion:* ${customer[0].Direccion}, *Referencia:* ${customer[0].Referencia}, *A nombre de:* ${customer[0].Nombre}.`,
          link: `https://api.whatsapp.com/send?phone=${"527491060297"}&text=Hola+me+gustaria+ordenar:`,
-         orderSaurces: (state.order.map(s => `${s.pz}pz de ${s.name}` )).toString()+",",
+         orderSaurces: (state.order.map(s => `${s.pz}pz de ${s.name}` )).toString()+", ",
          total:state.order.reduce((tot,sum) =>tot+sum.total,0),
          s:state.order
       }
-      const mensaje=`${info.orderSaurces} ${info.homeService ? info.address : ""} *Total a pagar:* $${info.total+(info.homeService ? info.homeServiceCost : 0)}.00. ${info.paymentMethod}`
+      const mensaje=`${info.orderSaurces} ${info.homeService ? info.address : ""} *Total a pagar:* $ ${info.total+(info.homeService ? info.homeServiceCost : 0)}.00. ${info.paymentMethod}`
 
       const link=info.link+info.orderSaurces+(info.homeService ? info.address : "")+(info.total+(info.homeService ? info.homeServiceCost : 0))+info.paymentMethod
-      return [info, link, info.link+encodeURIComponent(mensaje)]
+      return [info, link, info.link+encodeURIComponent(mensaje),mensaje]
    }
    const getOrder = () => {return state.order; }
 
@@ -101,15 +101,7 @@ const Index = () => {
                type={"imagens"}
                color={"#fff"}
             />
-            <div className="data">
-               {sushi.data.map(s => {
-                  return (
-                     <Section
-                        key={s.name.replaceAll(" ", "")}
-                        data={s}
-                     />)
-               })}
-            </div>
+            <Data />
             <button
                className='btnOrdenar'
                type="button"
