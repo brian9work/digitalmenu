@@ -1,10 +1,12 @@
 import React, { useState, useContext, useReducer } from 'react';
 import Tittle from '../components/Tittle';
 import AddOrder from './sushiMaki/AddOrder';
-import sushi from '../data/sushi.json'
+// import sushi from '../data/sushi.json'
 import Order from './sushiMaki/Order';
 import OrderContext from './sushiMaki/OrderContext';
 import Data from './sushiMaki/Data';
+import '../styles/colorsSushiMaki.css'
+import '../styles/sushiMaki.css'
 
 const SushiMaki = ()=>{
    const initialState = {
@@ -105,7 +107,7 @@ const Index = () => {
             <button
                className='btnOrdenar'
                type="button"
-               onClick={e => {
+               onClick={() => {
                   stateComponentOrder[1](true)
                }}
             >Ordenar</button>

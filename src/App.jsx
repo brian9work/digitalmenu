@@ -4,7 +4,7 @@ import Oyamel from './pages/Oyamel'
 import SushiMaki from './pages/SushiMaki'
 import viteLogo from '/vite.svg'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './styles/Index.css'
+import './styles/style.css'
 import Context from './pages/Context'
 
 function App() {

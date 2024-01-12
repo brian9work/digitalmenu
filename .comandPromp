@@ -1,0 +1,5 @@
+git add .
+git commit -m "arreglando errores"
+git push
+npm run build
+npm run deploy
