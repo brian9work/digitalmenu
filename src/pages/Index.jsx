@@ -84,9 +84,6 @@ const Index = () => {
                 })}
             </Section>
             <Footer />
-            {/* <Link to="/sushi">Sushi Maki</Link><br/>
-            <Link to="/burguers">Oyamel</Link><br/>
-            <Link to="/context">context</Link><br/> */}
         </div>
     );
 }

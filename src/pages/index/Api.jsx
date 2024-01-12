@@ -4,6 +4,15 @@ import sushiMakiLogo from '../../assets/sushiMaki/logo.png';
 import oyamelBack from '../../assets/oyamel/back.png';
 import oyamelBack2 from '../../assets/oyamel/back2.jpg';
 import oyamelLogo from '../../assets/oyamel/logo.jpg';
+import menuOyamel1 from "../../assets/pictures/menuOyamel1.png";
+import menuOyamel2 from "../../assets/pictures/menuOyamel2.png";
+import menuOyamel3 from "../../assets/pictures/menuOyamel3.png";
+import menuOyamel4 from "../../assets/pictures/menuOyamel4.png";
+import qrElPortal from "../../assets/pictures/qrElPortal.png";
+import qrElPortal2 from "../../assets/pictures/qrElPortal2.png";
+import qrElPortal3 from "../../assets/pictures/qrElPortal3.png";
+import qrSushiMaki from "../../assets/pictures/qrSushiMaki.png";
+import qrSushiMakiHorizontal from "../../assets/pictures/qrSushiMakiHorizontal.png";
 
 const Api = {
     services: [
@@ -20,15 +29,15 @@ const Api = {
         {img:oyamelBack2,cat:"Diseño de Menu",link:"/burguers/menu",des:"Sistema para ordenar Hamburguesas",restaurant:{logo:oyamelLogo,name:"Oyamel",loc:"Nanacamilpa, Tlaxcala"}}
     ],
     pictures:[
-        {img:"src/assets/pictures/menuOyamel1.png",desc:"Pagina 1 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
-        {img:"src/assets/pictures/menuOyamel2.png",desc:"Pagina 2 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
-        {img:"src/assets/pictures/menuOyamel3.png",desc:"Pagina 3 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
-        {img:"src/assets/pictures/menuOyamel4.png",desc:"Pagina 4 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
-        {img:"src/assets/pictures/qrElPortal.png",desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"Inactivo"},
-        {img:"src/assets/pictures/qrElPortal2.png",desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"Inactivo"},
-        {img:"src/assets/pictures/qrElPortal3.png",desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"Inactivo"},
-        {img:"src/assets/pictures/qrSushiMaki.png",desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"activo"},
-        {img:"src/assets/pictures/qrSushiMakiHorizontal.png",desc:"Diseño preliminar de un QR escaneable de un menu digital de manera horizontal",info:"activo"},
+        {img:menuOyamel1,desc:"Pagina 1 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
+        {img:menuOyamel2,desc:"Pagina 2 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
+        {img:menuOyamel3,desc:"Pagina 3 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
+        {img:menuOyamel4,desc:"Pagina 4 de un menu para un restaurante de hamburguersas a la parrilla/carbon",info:"activo"},
+        {img:qrElPortal,desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"Inactivo"},
+        {img:qrElPortal2,desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"Inactivo"},
+        {img:qrElPortal3,desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"Inactivo"},
+        {img:qrSushiMaki,desc:"Diseño preliminar de un QR escaneable de un menu digital",info:"activo"},
+        {img:qrSushiMakiHorizontal,desc:"Diseño preliminar de un QR escaneable de un menu digital de manera horizontal",info:"activo"},
     ],
     questions:[
         {question:"¿Cuánto tiempo lleva implementar estos servicios en mi restaurante?",response:"El tiempo dependera de la informacion que me proporcione, ademas de la disposicion que tenga"},
