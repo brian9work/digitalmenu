@@ -9,12 +9,12 @@ import Footer from './index/Footer';
 
 const Index = () => {
     return (
-        <div className=''>
+        <div>
             <Header />
-            <Section text={"Accede a mas clientes"} className={"info"}>
+            <Section text={"Accede a mas clientes"} varClassName={"info"}>
                 <p className='content-section-text'>Nos enorgullece ofrecer soluciones digitales innovadoras para llevar la experiencia gastronómica de tu restaurante al siguiente nivel. Nos especializamos en la creación de menús digitales, páginas web personalizadas y sistemas de pedidos online que transformarán por completo la forma en que tu negocio interactúa con los clientes.</p>
             </Section>
-            <Section text={"Servicios"} className={"services"}>
+            <Section text={"Servicios"} varClassName={"services"}>
                 {Api.services.map((servicio, index) => {
                     return (
                         <BoxShadow key={index}>
@@ -26,7 +26,7 @@ const Index = () => {
                     )
                 })}
             </Section>
-            <Section text={"Referencias"} className={"references"}>
+            <Section text={"Referencias"} varClassName={"references"}>
                 {Api.references.map((refe, index) => {
                     return (
                         <BoxShadow key={index}>
@@ -48,7 +48,7 @@ const Index = () => {
                     )
                 })}
             </Section>
-            <Section text={"Galeria"} className={"pictures"}>
+            <Section text={"Galeria"} varClassName={"pictures"}>
                 {Api.pictures.map((pic, index) => {
                     return (
                         <div key={index}>
@@ -61,18 +61,14 @@ const Index = () => {
                     )
                 })}
             </Section>
-            <Section text={"Preguntas Frecuentes"} className={"questions"}>
+            <Section text={"Preguntas"} varClassName={"questions"}>
                 {Api.questions.map((ques,index) => {
                     // scrollHeight
-                    const [scrollHeight,setScrollHeight] = useState("4rem");
+                    const [scrollHeight,setScrollHeight] = useState("4.5rem");
                     return(
                         <div key={index} style={{height:scrollHeight}} >
                             <div onClick={e =>{
-                                    console.log("click")
-                                    console.log(e.target.parentElement.scrollHeight)
-                                    console.log(e.target)
-                                    console.log(e.target.parentElement)
-                                    setScrollHeight(scrollHeight === "4rem" ? e.target.parentElement.scrollHeight + "px" : "4rem")
+                                    setScrollHeight(scrollHeight === "4.5rem" ? e.target.parentElement.scrollHeight + "px" : "4.5rem")
                                 }}
                             >
                                 <h3>{ques.question}</h3>

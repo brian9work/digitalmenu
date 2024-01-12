@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SocialMedia = ({data}) => {
-    console.log(data);
     return (
         <div className='socialMedia'>
             {data.map((d,index)=>{

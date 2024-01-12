@@ -1,15 +1,15 @@
 import React from 'react';
 import BoxShadow from '../../components/BoxSHadow';
 
-const Section = ({text, className, children }) => {
+const Section = ({text, varClassName, children }) => {
     return (
-        <div className={`content ${className}`} id={className}>
+        <div className={`content ${varClassName}`} id={varClassName}>
             <section className='content-section'>
                 <span></span>
                 <h2>{text}</h2>
                 <span></span>
             </section>
-            <nav className={`${className}`}>
+            <nav className={`${varClassName}`}>
                 {/* <BoxShadow> */}
                     {children}
                 {/* </BoxShadow> */}

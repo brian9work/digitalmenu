@@ -27,7 +27,7 @@ header{
                 flex-direction: column;
                 div{
                     width: 100%;
-                    padding-left: 2rem;
+                    padding-left: 30px;
                     // background-color: red;
                     h2{
                         font-size: 2rem;
@@ -38,6 +38,7 @@ header{
                     p{
                         display: block;
                         max-width: 60%;
+                        max-width: 300px;
                         font-size: 1.5rem;
                         color: white;
                         font-family: 'Jura';
@@ -187,6 +188,9 @@ header{
                         background-color: rgba(0,0,0,.7);
                         backdrop-filter: blur(20px);
                         height: calc(100vh - 50px);
+                        main{
+                            display: block;
+                        }
                     }
                     .menu .hamburger{
                         svg{
@@ -236,6 +240,7 @@ header{
                         position: absolute;
                         top: 1.5rem;
                         flex-direction: column;
+                        display: none;
                         >a{
                             display: block;
                             padding: .3rem 2rem;
@@ -314,12 +319,16 @@ header{
             .content-shadow{
                 width: 100%;
                 max-width: 330px;
-                padding: 1rem ;
+                padding: 1rem;
+                // background-color: red;
                 span{
                     font-size: 6rem;
                     display: block;
                     text-align: center;
                     height: 6.3rem;
+                    margin: 0 auto;
+                    width: 8rem;
+                    // background-color: blue;
                     // background-color: red;
                 }
                 p{
