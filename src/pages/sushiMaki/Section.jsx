@@ -24,6 +24,7 @@ const Section = ({ data }) => {
                 <nav>
                     {data.data.map(d =>{
                         return (<Item
+                            height={[height,setheight]}
                             className={(data.name+"_"+d.plat).replaceAll(" ","_").replaceAll("(","_").replaceAll(")","_")} 
                             key={(data.name+"_"+d.plat).replaceAll(" ","_").replaceAll("(","_").replaceAll(")","_")}
                             data={d} 

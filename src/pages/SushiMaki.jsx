@@ -9,6 +9,7 @@ import '../styles/colorsSushiMaki.css'
 import '../styles/sushiMaki.css'
 import background from '../assets/backgroundSushiMaki.jpg'
 import SocialMedia from '../components/SocialMedia';
+import Footer from '../components/Footer';
 
 const SushiMaki = ()=>{
    const initialState = {
@@ -101,6 +102,7 @@ const Index = () => {
          <div className="background">
             <img src={background} alt="sushi Maki" />
          </div>
+         <SocialMedia data={socialMedia} />
          <Order />
          <AddOrder />
          <div className="content">
@@ -119,7 +121,7 @@ const Index = () => {
                }}
             >Ordenar</button>
          </div>
-         <SocialMedia data={socialMedia} />
+         <Footer></Footer>
       </div>
    )
 }

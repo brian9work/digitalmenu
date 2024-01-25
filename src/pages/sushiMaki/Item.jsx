@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import OrderContext from './OrderContext';
 
-const Item = ({ className, data }) => {
+const Item = ({ className, data,height }) => {
     const { setSaurceSelected,
             stateComponentAddSaurce,
             functionsOrder
         } = useContext(OrderContext);
-
 
 
     const addOrdenFunc = (e) => {
@@ -14,6 +13,7 @@ const Item = ({ className, data }) => {
         setSaurceSelected(className)
         document.getElementById("addOrder").focus()
         stateComponentAddSaurce[1]("1")
+        // height[1]((e.target.parentElement.parentElement.scrollHeight) + "px")
     }
     return (
         <div

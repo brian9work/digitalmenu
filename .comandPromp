@@ -1,5 +1,5 @@
 git add .
-git commit -m "Incorporacion de pagina principal"
+git commit -m "Se agrego un Footer"
 git push
 npm run build
 npm run deploy
